@@ -1,0 +1,30 @@
+.scroll-reveal {
+  opacity: 0;
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal--up {
+  transform: translateY(50px);
+}
+
+.scroll-reveal--left {
+  transform: translateX(-50px);
+}
+
+.scroll-reveal--right {
+  transform: translateX(50px);
+}
+
+.scroll-reveal--fade {
+  transform: none;
+}
+
+.scroll-reveal--scale {
+  transform: scale(0.9);
+}
+
+.scroll-reveal--visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}

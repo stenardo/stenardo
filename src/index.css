@@ -1,0 +1,119 @@
+/* ===== CSS Reset & Design Tokens ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Rosa claro palette */
+  --pink-50: #fff5f7;
+  --pink-100: #ffe0e9;
+  --pink-200: #ffc2d4;
+  --pink-300: #ffa3bf;
+  --pink-400: #ff85aa;
+  --pink-500: #ff6b95;
+  --pink-600: #e84d7a;
+  --pink-700: #c9305d;
+  --pink-800: #a01845;
+  --pink-900: #700d30;
+
+  /* Neutrals */
+  --white: #ffffff;
+  --off-white: #fefbfc;
+  --gray-100: #f8f4f5;
+  --gray-200: #e8e0e3;
+  --gray-300: #c4b8bc;
+  --gray-800: #3d2b33;
+  --gray-900: #2a1c22;
+
+  /* Accent */
+  --gold: #d4a574;
+  --gold-light: #f0d4b4;
+  --lavender: #e8d5f5;
+  --lavender-light: #f3eafa;
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, var(--pink-100) 0%, var(--lavender-light) 50%, var(--pink-50) 100%);
+  --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(255, 224, 233, 0.4));
+  --gradient-button: linear-gradient(135deg, var(--pink-400) 0%, var(--pink-500) 50%, var(--pink-600) 100%);
+  --gradient-text: linear-gradient(135deg, var(--pink-500), var(--pink-700));
+
+  /* Glass */
+  --glass-bg: rgba(255, 255, 255, 0.55);
+  --glass-border: rgba(255, 192, 212, 0.35);
+  --glass-shadow: 0 8px 32px rgba(255, 107, 149, 0.12);
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-script: 'Dancing Script', cursive;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+
+  /* Border radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-fast: 0.2s var(--ease-out);
+  --transition-normal: 0.4s var(--ease-out);
+  --transition-slow: 0.8s var(--ease-out);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--pink-50);
+  color: var(--gray-800);
+  line-height: 1.7;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* ===== Scrollbar Styling ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--pink-50);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--pink-300);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--pink-400);
+}
+
+/* ===== Selection ===== */
+::selection {
+  background: var(--pink-200);
+  color: var(--pink-800);
+}
